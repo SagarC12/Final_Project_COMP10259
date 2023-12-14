@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Your Species Name</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="gallery.css">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+<body>
+<!-- Header Start -->
+<header class="header">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="fish-name">
+                <!-- Write your species name under the anchor tag -->
+                <a href="index.html"></a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#predators">Prey & Predators</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="index.html#count">World Count</a></li>
+                    <li><a href="honesty.html">Honesty Declaration</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="slideshow">
+    <a data-fancybox="gallery" href="https://a-z-animals.com/media/catfish-isolated.jpg">
+        <img src="https://a-z-animals.com/media/catfish-isolated.jpg" alt="Image 1" width="200px">
+    </a>
+
+    <a data-fancybox="gallery" href="https://media.istockphoto.com/id/477175197/photo/the-catfish.jpg?s=612x612&w=0&k=20&c=xtJVlZjkOdoIa1vkFJjN5Sq_99s6llqE5n7Uk-Iv7NI=">
+        <img src="https://media.istockphoto.com/id/477175197/photo/the-catfish.jpg?s=612x612&w=0&k=20&c=xtJVlZjkOdoIa1vkFJjN5Sq_99s6llqE5n7Uk-Iv7NI=" alt="Image 2">
+    </a>
+    <a data-fancybox="gallery" href="https://media.istockphoto.com/id/477175197/photo/the-catfish.jpg?s=612x612&w=0&k=20&c=xtJVlZjkOdoIa1vkFJjN5Sq_99s6llqE5n7Uk-Iv7NI=">
+        <img src="https://media.istockphoto.com/id/477175197/photo/the-catfish.jpg?s=612x612&w=0&k=20&c=xtJVlZjkOdoIa1vkFJjN5Sq_99s6llqE5n7Uk-Iv7NI=" alt="Image 3" width="200px">
+    </a>
+</div>
+<div class="sty">
+    <a data-fancybox="gallery" data-type="iframe" href="https://www.youtube.com/embed/nqye02H_H6I">
+      
+       <video controls width="400">
+        <source src="https://www.youtube.com/embed/nqye02H_H6I" type="video/mp4">
+        
+      </video>
+    </a>
+    
+
+    <a data-fancybox="gallery" data-type="iframe" href="https://www.youtube.com/embed/Qxmzaex1mcE">
+        <video width="500" height="300" controls>
+            <source src="https://www.youtube.com/embed/Qxmzaex1mcE" type="video/mp4">
+            
+          </video>
+    </a>
+    <a data-fancybox="gallery" data-type="iframe" href="https://youtu.be/K87aFjB7Ff0">
+      
+        <video controls width="400">
+         <source src="https://youtu.be/K87aFjB7Ff0" type="video/mp4">
+         
+       </video>
+    </a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var scrollPosition = $(window).scrollTop();
+      if (scrollPosition > 0) {
+        $('.navbar').addClass('fixed');
+      } else {
+        $('.navbar').removeClass('fixed');
+      }
+    });
+
+    // Initialize Fancybox for the gallery
+    $("[data-fancybox]").fancybox({
+      loop: true, // Enables looping through items
+      infobar: false, // Hides the bottom information bar
+      buttons: ["slideShow", "fullScreen", "thumbs", "close"], // Display buttons
+      clickOutside: "close", // Close on click outside the content
+      clickSlide: "close", // Close on click the slide
+      touch: {
+        vertical: false, // Allow vertical swipe
+      },
+      iframe: {
+        preload: false, // Disable preloading for iframes
+      },
+    });
+  });
+</script>
+</body>
+</html>

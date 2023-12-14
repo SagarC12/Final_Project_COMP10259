@@ -1,0 +1,23 @@
+
+
+.header .nav ul li  a {
+  color: yellow;
+}
+
+.header .nav ul li a:hover,
+.header.fixed .nav ul li a:hover {
+  color: white;
+}
+
+.index-page .button {
+  background-color: red;
+}
+
+.contact-us-form {
+  border: 1px dashed;
+}
+
+.button::after {
+  content: attr(data-name);
+  text-transform: uppercase;
+}
